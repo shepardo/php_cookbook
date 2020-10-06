@@ -28,8 +28,8 @@ class LittleCalendar {
   public function __construct($month, $year) {
     /* Build a DateTime for the month we're going to display */
     $this->monthToUse = DateTime::createFromFormat('Y-m|',
-    sprintf("%04d-%02d",
-    $year, $month));
+      sprintf("%04d-%02d",
+      $year, $month));
     $this->prepare();
   }
 
@@ -107,14 +107,14 @@ class LittleCalendar {
     $nextMonth->format('Y'),
       '&raquo;');
     $html = '<table id="'.htmlentities($opts['id']).'">
-    <tr>
-    <td class="'.htmlentities($classes['prev']).'">' .
-    $prevMonthLink . '</td>
-    <td class="'.htmlentities($classes['month']).'" colspan="5">'.
-    $this->monthToUse->format('F Y') .'</td>
-    <td class="'.htmlentities($classes['next']).'">' .
-    $nextMonthLink . '</td>
-    </tr>';
+      <tr>
+      <td class="'.htmlentities($classes['prev']).'">' .
+      $prevMonthLink . '</td>
+      <td class="'.htmlentities($classes['month']).'" colspan="5">'.
+      $this->monthToUse->format('F Y') .'</td>
+      <td class="'.htmlentities($classes['next']).'">' .
+      $nextMonthLink . '</td>
+      </tr>';
     $html .= '<tr>';
     $lastDayIndex = count($this->days) - 1;
     foreach ($this->days as $i => $day) {
@@ -133,8 +133,8 @@ class LittleCalendar {
           break;
       }
       $html .=
-      '<td class="' . htmlentities($classes[$class]).'">'.
-      $label . '</td>';
+        '<td class="' . htmlentities($classes[$class]).'">'.
+        $label . '</td>';
       if (isset($day['endOfRow']) && $day['endOfRow']) {
         $html .= "</tr>\n";
         if ($i != $lastDayIndex) {
