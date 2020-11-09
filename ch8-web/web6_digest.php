@@ -1,6 +1,9 @@
 <?php
 /* replace with appropriate username and password checking,
-such as checking a database */
+such as checking a database 
+Example 8-3 provides functions that compute digest
+authentication as specified in RFC 2617.
+*/
 $users = array('david' => 'fadj&32',
 'adam' => '8HEj838');
 $realm = 'My website';
